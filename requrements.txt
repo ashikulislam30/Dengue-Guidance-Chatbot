@@ -1,0 +1,4 @@
+
+//npm init -y
+//npm install express
+// for use the server node server.js

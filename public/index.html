@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Dengue Guidance Chatbot</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<link rel="stylesheet" href="style.css" />
+</head>
+<body>
+    
+  <div class="page">
+    <!-- Top title like your drawing -->
+    <header class="header">
+      <h1>Dengue Guidance Chatbot</h1>
+    </header>
+
+    <!-- Main blank chat area -->
+    <main class="chat-area">
+      <div id="messages" class="messages">
+        <div class="message assistant">
+          
+          <div class="bubble">
+            Hello, I am a dengue guidance chatbot.Ask me anything about dengue
+            symptoms, warning signs,<br> or prevention. I cannot diagnose you, so
+            always consult a doctor for medical decisions.
+          </div>
+        </div>
+      </div>
+    </main>
+
+    <!-- Bottom input bar (long rectangle with send at right) -->
+    <footer class="input-bar">
+      <form id="chat-form" class="chat-form">
+        <textarea
+          id="user-input"
+          placeholder="Type your question about dengue..."
+          rows="1"
+        ></textarea>
+       <button type="submit" class="send-button">Send</button>
+      </form>
+      
+    </footer>
+    
+         
+     
+
+    <!-- Hidden new-chat button so app.js doesn’t break -->
+    <button id="new-chat-btn" class="new-chat-hidden" type="button">
+      New chat
+    </button>
+  </div>
+
+  <script src="app.js"></script>
+</body>
+</html>

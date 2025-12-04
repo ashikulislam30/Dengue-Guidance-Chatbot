@@ -1,0 +1,168 @@
+*{
+    margin: 0;
+    padding: 0;
+    
+}
+body{
+    background-color: rgb(168, 171, 184);
+}
+.header{
+    font-size: 30px;
+    font-weight: bold;
+    text-align: center;
+    background-color: rgb(36, 40, 75);
+    color: white;
+    
+}
+.input-bar {
+    position: fixed;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 100%;
+    width: 800px;
+    height: 120px;
+   
+    background-color: rgb(36, 40, 75);
+    padding: 10px;
+    box-shadow: 0 -2px 5px rgba(0, 0, 0, 0.2);
+    margin-bottom: 10px;
+    border-radius: 10px;
+}
+
+.input-bar textarea {
+    width: calc(100% - 50px);
+    padding: 10px;
+    height: 50px;
+    border: none;
+    border-radius: 5px;
+    resize: none;
+    outline: none;
+    font-size: 16px;
+}
+.input-bar textarea::placeholder {
+    color: rgba(255, 255, 255, 0.6); /* Placeholder color */
+    transition: opacity 0.3s ease;
+}
+
+.input-bar textarea:focus::placeholder {
+    opacity: 0; /* Hide placeholder when typing */
+}
+.send-button{
+
+    position: fixed;
+    bottom: 12px;
+    right: 30px;   
+    background-color: royalblue;
+    font-size: 20px;
+    padding: 7px;
+    border: 5px;
+    border-radius: 10px;
+    color: white;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background-color 0.3s, transform 0.3s; /* Smooth transition for hover effect */
+    
+}
+
+.send-button:hover {
+    background-color: rgb(72, 114, 206); /* Darker shade on hover */
+    transform: scale(1.1); /* Slightly enlarge the button */
+}
+.new-chat-hidden{
+   position: fixed;
+   top: 15px;
+   left: 20px;
+   background-color: royalblue;
+    font-size: 15px;
+    padding: 7px;
+    border: 5px;
+    border-radius: 10px;
+    color: white;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background-color 0.3s, transform 0.3s;
+}
+.new-chat-hidden:hover {
+    background-color: rgb(72, 114, 206); 
+    transform: scale(1.1);
+}
+.chat-area {
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    height: 100vh;
+    opacity: 0;
+    transform: translateY(50px);
+    animation: fadeIn 1.5s ease-out forwards;
+}
+
+@keyframes fadeIn {
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+
+.bubble{
+    align-items: top;
+}
+
+
+
+
+
+
+/* Style for the input field */
+.input-bar textarea {
+    width: calc(100% - 60px);
+    padding: 15px;
+    height: 50px;
+    border: 2px solid #007bff;
+    border-radius: 8px;
+    resize: none;
+    outline: none;
+    font-size: 16px;
+    background-color: #f9f9f9;
+    color: #333;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.input-bar textarea:focus {
+    border-color: #0056b3;
+    box-shadow: 0 0 8px rgba(0, 91, 187, 0.5);
+}
+
+/* Style for user messages */
+.message.user .bubble {
+    background-color: #007bff;
+    color: white;
+    padding: 10px 15px;
+    border-radius: 15px 15px 0 15px;
+    max-width: 70%;
+    margin: 5px 0;
+    align-self: flex-end;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    font-size: 20px;
+}
+
+/* Style for assistant messages */
+.message.assistant .bubble {
+    background-color: #f1f1f1;
+    color: #333;
+    padding: 10px 15px;
+    border-radius: 15px 15px 15px 0;
+    max-width: 70%;
+    margin: 5px 0;
+    align-self: flex-start;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    font-size: 20px;
+}
+
+/* Add typing animation for assistant */
+.message.assistant .bubble.typing {
+    background-color: #e0e0e0;
+    font-style: italic;
+    color: #666;
+}
